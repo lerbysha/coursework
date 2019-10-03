@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Stat" representedClassName="Stat" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="like" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Link" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Stat" positionX="226.0625" positionY="-78.6640625" width="128" height="88"/>
+    </elements>
+</model>
