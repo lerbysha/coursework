@@ -12,7 +12,7 @@ import RealmSwift
 
 class EditViewController: UIViewController {
 
-    var realm: Realm!
+    private let presenter = EditVCPresenter()
     
     
 
@@ -25,26 +25,19 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+     
         
     }
     
     @IBAction func saveButton(_ sender: Any) {
         name = nameTF.text!
         url = urlTF.text!
-        save(name: name, url: url)
+        presenter.save(name: name, url: url)
         
     }
     
-    func save(name:String, url: String) {
-        let linkItem = Link()
-        linkItem.title = name
-        linkItem.url = url
-        try! self.realm.write {
-            self.realm.add(linkItem)
-        }
-    }
+    
+    
    
 
 }

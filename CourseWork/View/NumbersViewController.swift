@@ -9,20 +9,14 @@
 import UIKit
 
 class NumbersViewController: UIViewController {
-
+    
+    var presenter = NumbersApiPresenter()
     var answer = ""
     let manager = APIManager()
     
     @IBAction func mathButton(_ sender: Any) {
-        let datas = manager.getData(url: "http://numbersapi.com/random/math",completionBlock: {[weak self] (response) in
-             switch response {
-             case .success(let value):
-                self?.answer = value
-                
-             case .failure(let error):
-                print(error)
-            }
-        })
+        
+        self.answer = presenter.getMathStat()
         let alert = UIAlertController(title: "\(self.answer)", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -37,29 +31,13 @@ class NumbersViewController: UIViewController {
     }
     
     @IBAction func dateButton(_ sender: Any) {
-        let datas = manager.getData(url: "http://numbersapi.com/random/date",completionBlock: {[weak self] (response) in
-             switch response {
-             case .success(let value):
-                self?.answer = value
-                
-             case .failure(let error):
-                print(error)
-            }
-        })
+        self.answer = presenter.getDateStat()
         let alert = UIAlertController(title: "\(self.answer)", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     @IBAction func triviaButton(_ sender: Any) {
-        let datas = manager.getData(url: "http://numbersapi.com/random/trivia",completionBlock: {[weak self] (response) in
-             switch response {
-             case .success(let value):
-                self?.answer = value
-                
-             case .failure(let error):
-                print(error)
-            }
-        })
+        self.answer = presenter.getTriviaStat()
         let alert = UIAlertController(title: "\(self.answer)", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
