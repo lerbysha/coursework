@@ -1,22 +1,45 @@
 PODS:
-  - Realm (3.19.0):
-    - Realm/Headers (= 3.19.0)
-  - Realm/Headers (3.19.0)
-  - RealmSwift (3.19.0):
-    - Realm (= 3.19.0)
+  - Alamofire (5.0.2)
+  - FloatingPanel (1.7.4)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - RealmSwift
+  - FloatingPanel
+  - Moya/RxSwift (~> 14.0)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
-    - Realm
-    - RealmSwift
+    - Alamofire
+    - FloatingPanel
+    - Moya
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
 
 SPEC CHECKSUMS:
-  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
-  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  FloatingPanel: 3c9d0e30fe350e1613157557769d2ec97f76b96b
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: d73e5fb7a14ab5ec4a9af6c90421dab0a066b258
+PODFILE CHECKSUM: db3870dd74270f121f0b71455c07e7edab4e3798
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4
